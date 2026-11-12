@@ -1,20 +1,71 @@
-<<<<<<< HEAD
-# React + Vite
+# Web POS & Inventory Management System — Warung Sembako Gamantha
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
 
-Currently, two official plugins are available:
+![React JS](https://img.shields.io/badge/React.js-v18+-61DAFB?style=for-the-badge&logo=react&logoColor=black)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v3-38Bdf8?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Firebase](https://img.shields.io/badge/Firebase-Firestore-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Aplikasi Point of Sales (POS) dan Manajemen Inventaris berbasis Web modern yang dirancang khusus untuk mengotomatisasi pencatatan transaksi, pengelolaan stok real-time, serta pelaporan keuangan UMKM **Warung Sembako Gamantha**.
 
-## React Compiler
+</div>
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📌 Informasi Proyek
+* **Nama UMKM:** Warung Sembako Gamantha
+* **Lokasi Usaha:** Jl. Sambong Girang, Mangkubumi
+* **Pengembang / Peneliti:** Ridzki Ahnovalrian Arifin (NIM: 2503010031)
+* **Program Studi:** Teknik Informatika (Kelas B)
+* **Platform:** Responsive Web (Desktop, Tablet, & Mobile Optimized)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-=======
-# warung-gamantha
->>>>>>> 99c293cf9db40b74cd3be30e57ce37af95403231
+---
+
+## 🚀 Fitur Utama Sistem
+
+1. **Dashboard Overview & Analitik Bisnis**
+   * Kartu statistik interaktif untuk memantau Total Pendapatan, Jumlah Transaksi, dan Peringatan Stok Menipis secara *real-time*.
+   * Daftar transaksi terbaru dan sistem *alert* otomatis untuk produk yang memerlukan restock.
+2. **Web POS Kasir (Point of Sales)**
+   * Katalog produk interaktif dilengkapi pencarian cepat dan filter berdasarkan kategori (*Sembako, Minuman, Rokok, Kebutuhan Rumah Tangga*).
+   * Perhitungan otomatis subtotal, kembalian tunai, serta pengurangan stok di database secara instan setelah pembayaran diselesaikan.
+   * **Fitur Cetak Struk Belanja:** Pratinjau dan pencetakan struk transaksi termal standar untuk pembeli.
+3. **Manajemen Data Barang (CRUD)**
+   * Pengelolaan inventaris lengkap: Tambah, Ubah, Hapus, dan Cari data barang berdasarkan kode, nama, kategori, harga jual, dan jumlah stok.
+4. **Manajemen Stok Masuk (Restock)**
+   * Pencatatan penambahan stok barang kulakan dari pemasok yang terintegrasi langsung dengan log riwayat database.
+5. **Riwayat Transaksi & Detail Penjualan**
+   * Menu audit terpusat untuk meninjau kembali daftar transaksi masa lalu beserta rincian produk yang dibeli pada nomor transaksi tertentu.
+
+---
+
+## 🛠️ Tech Stack
+
+* **Frontend:** React JS (Vite / Single Page Application)
+* **Styling:** Tailwind CSS v3 (Custom Design & Responsive Grid)
+* **Database & Cloud:** Firebase Firestore (Real-time NoSQL Database)
+* **Icons & UI Utilities:** Lucide React
+
+---
+
+## 📂 Struktur Direktori Proyek
+
+```text
+warung-sembako-gamantha/
+├── public/
+│   └── favicon.ico
+├── src/
+│   ├── assets/              # Aset statis & gambar
+│   ├── components/          # Modul komponen utama
+│   │   ├── DashboardView.jsx# Modul laporan & ringkasan statistik
+│   │   ├── HistoryView.jsx  # Modul riwayat transaksi & detail
+│   │   ├── InventoryView.jsx# Modul CRUD data sembako & kategori
+│   │   ├── PosView.jsx      # Modul kasir, keranjang, & cetak struk
+│   │   └── StockView.jsx    # Modul restock barang masuk
+│   ├── App.jsx              # Layout utama & navigasi responsif
+│   ├── firebase.js          # Konfigurasi koneksi Firebase Firestore
+│   └── index.css            # Pengaturan kustom Tailwind & CSS global
+├── tailwind.config.js       # Konfigurasi Tailwind CSS v3
+├── package.json             # Daftar dependencies proyek
+└── README.md                # Dokumentasi proyek
